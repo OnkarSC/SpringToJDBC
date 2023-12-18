@@ -13,7 +13,7 @@ public class SpringToJdbcApplication {
 		ApplicationContext applicationContext = new ClassPathXmlApplicationContext("Bean.xml");
 		Intermediate intermediate = applicationContext.getBean("jdbc", Intermediate.class);
 		intermediate.retrieveAllData();
-		intermediate.deleteData(1);
+//		intermediate.deleteData(1);
 	}
 
 }

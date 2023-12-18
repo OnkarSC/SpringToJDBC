@@ -38,7 +38,7 @@ public class Intermediate {
 
     Connection connection;
 
-    @PostConstruct
+//    @PostConstruct
     public void init() throws SQLException, ClassNotFoundException {
         getConnection();
     }
@@ -48,7 +48,7 @@ public class Intermediate {
         connection = DriverManager.getConnection(url, userName, password);
     }
 
-    @PreDestroy
+   // @PreDestroy
     public void closeConnection() throws SQLException, ClassNotFoundException {
         connection.close();
         System.out.println("Connection closed...");

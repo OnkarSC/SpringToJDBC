@@ -10,7 +10,7 @@
     <context:annotation-config/>
 
 <!--    <context:property-placeholder location="connection.properties"/>-->
-    <bean id="jdbc" class="com.qsp.SpringToJdbc.Intermediate">
+    <bean id="jdbc" class="com.qsp.SpringToJdbc.Intermediate" init-method="init" destroy-method="closeConnection">
         <property name="driver" value="com.mysql.cj.jdbc.Driver"/>
         <property name="url" value="jdbc:mysql://localhost:3306/facebook"/>
         <property name="userName" value="root"/>
